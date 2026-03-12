@@ -7,45 +7,58 @@ using namespace std;
 string toUpperCase(const string& s)
 {
     string result = s;
-    for (size_t i = 0; i < result.size(); ++i)
+
+    for (size_t i = 0; i < result.size(); i++)
     {
-        result[i] = static_cast<char>(toupper(static_cast<unsigned char>(result[i])));
+        result[i] = toupper(result[i]);
     }
+
     return result;
 }
 
 string toLowerCase(const string& s)
 {
     string result = s;
-    for (size_t i = 0; i < result.size(); ++i)
+
+    for (size_t i = 0; i < result.size(); i++)
     {
-        result[i] = static_cast<char>(tolower(static_cast<unsigned char>(result[i])));
+        result[i] = tolower(result[i]);
     }
+
     return result;
 }
 
 int main()
 {
+    cout << "Программа обработки строки" << endl;
     string s;
     int choice;
 
     cout << "Лабораторная работа №1" << endl;
     cout << "Работа со строками" << endl;
-    cout << "1 - перевести строку в ВЕРХНИЙ регистр" << endl;
-    cout << "2 - перевести строку в НИЖНИЙ регистр" << endl;
+    cout << "--------------------------------" << endl;
 
-    cout << "\nВведите строку: ";
+    cout << "Введите строку: ";
     getline(cin, s);
 
+    cout << endl;
+    cout << "Выберите действие:" << endl;
+    cout << "1 - перевести строку в ВЕРХНИЙ регистр" << endl;
+    cout << "2 - перевести строку в НИЖНИЙ регистр" << endl;
     cout << "Ваш выбор: ";
+
     cin >> choice;
+
+    cout << endl;
 
     if (choice == 1)
     {
+        cout << "Обработка строки..." << endl;
         cout << "Результат: " << toUpperCase(s) << endl;
     }
     else if (choice == 2)
     {
+        cout << "Обработка строки..." << endl;
         cout << "Результат: " << toLowerCase(s) << endl;
     }
     else
