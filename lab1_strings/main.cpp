@@ -31,6 +31,7 @@ string toLowerCase(const string& s)
 int main()
 {
     cout << "Программа обработки строки" << endl;
+    cout << "Запуск программы" << endl;
     string s;
     int choice;
 
